@@ -22,6 +22,7 @@ defmodule Caesar.Cipher do
   defp shift_char(char, shift) do
     case char do
       chr when chr in ?a..?z -> calculate_mapping(?a, chr, shift)
+      chr when chr in ?A..?Z -> calculate_mapping(?a, chr, shift)
       chr -> chr
     end
   end
